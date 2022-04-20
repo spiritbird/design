@@ -6,9 +6,20 @@ import (
 )
 
 func main() {
-	concurrentAppendSliceNotForceIndex()
-	//concurrentAppendSliceForceIndex()
+	const (
+		a, b = "golang", 100
+		d, e
+		f bool = true
+		g
+	)
+	fmt.Println(d, e, g)
 }
+
+//func main() {
+//
+//	//concurrentAppendSliceNotForceIndex()
+//	//concurrentAppendSliceForceIndex()
+//}
 
 //不带索引
 func concurrentAppendSliceNotForceIndex() {
