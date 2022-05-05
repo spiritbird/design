@@ -9,15 +9,16 @@ import (
 func FetchUrmDemo() error {
 	var g errgroup.Group
 	var urls = []string{
-		"http://pk.go.dev",
+		"http://www.baidu.com",
 		"http://www.liwenzhou.com",
-		"http://www.baiduxxx.com",
+		"http://www.baiduxxxrfff.com",
 	}
 	for _, url := range urls {
+		url := url
 		g.Go(func() error {
 
 			resp, err := http.Get(url)
-			if err != nil {
+			if err == nil {
 				fmt.Println("获取%s成功", url)
 				resp.Body.Close()
 			}
